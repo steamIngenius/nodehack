@@ -1,0 +1,12 @@
+{
+  "name": "nodhack",
+  "version": "0.1.0",
+  "main": "src/main.js",
+  "dependencies": {
+    "electron-prebuilt": "^0.30.6",
+    "rot-js": "^0.6.0"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/electron ."
+  }
+}
