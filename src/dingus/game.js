@@ -1,5 +1,8 @@
 var ROT = require('rot-js');
 
+ROT.DEFAULT_HEIGHT = 999;
+ROT.DEFAULT_WIDTH = 999;
+
 // Create our player
 var Player = function(x, y) {
     this._x = x;
