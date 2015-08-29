@@ -1,8 +1,5 @@
 var ROT = require('rot-js');
 
-
-
-
 // Create our player
 var Player = function(x, y) {
     this._x = x;
@@ -22,14 +19,24 @@ Player.prototype.act = function() {
 
 Player.prototype.handleEvent = function(e) {
     var keyMap = {};
-    keyMap[38, 75] = 0; // up
-    keyMap[33, 85] = 1; // up-right
-    keyMap[39, 76] = 2; // right
-    keyMap[34, 78] = 3; // down - right
-    keyMap[40, 74] = 4; // down
-    keyMap[35, 66] = 5; // down - left
-    keyMap[37, 72] = 6; // left
-    keyMap[36, 89] = 7; // up-left
+    // arrows
+    keyMap[38] = 0; // up
+    keyMap[33] = 1; // up-right
+    keyMap[39] = 2; // right
+    keyMap[34] = 3; // down - right
+    keyMap[40] = 4; // down
+    keyMap[35] = 5; // down - left
+    keyMap[37] = 6; // left
+    keyMap[36] = 7; // up-left
+    // vi keybindings
+    keyMap[75] = 0; // up
+    keyMap[85] = 1; // up-right
+    keyMap[76] = 2; // right
+    keyMap[78] = 3; // down - right
+    keyMap[74] = 4; // down
+    keyMap[66] = 5; // down - left
+    keyMap[72] = 6; // left
+    keyMap[89] = 7; // up-left
 
     var code = e.keyCode;
 
@@ -53,7 +60,6 @@ Player.prototype.handleEvent = function(e) {
 // Create our game
 var Game = {
     display: null,
-
 
     init: function() {
         
